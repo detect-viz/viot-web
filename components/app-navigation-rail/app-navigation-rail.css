@@ -1,0 +1,15 @@
+
+md-navigation-rail {
+    position: fixed;
+    top: 64px; /* below header */
+    left: 0;
+    height: calc(100% - 64px);
+    background: var(--md-sys-color-surface);
+    transition: transform 0.3s ease;
+    z-index: 100;
+  }
+  
+md-navigation-rail.hidden {
+transform: translateX(-100%);
+}
+  

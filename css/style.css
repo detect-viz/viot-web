@@ -1,0 +1,128 @@
+/* css/style.css */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+    --md-sys-color-primary: #5c33a2;
+    --md-sys-color-surface: #f8f5ff;
+    --md-sys-color-on-surface: #3c2a67;
+    --md-sys-color-on-primary: #ffffff;
+    --md-sys-color-outline: #ccc;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  main {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  aside {
+    width: 280px;
+    background-color: var(--md-sys-color-surface);
+    border-right: 1px solid var(--md-sys-color-outline);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  
+  section.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    overflow: auto;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pdu-button {
+    background-color: #e7e1f3;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .pdu-button:hover {
+    background-color: #dcd2ef;
+  }
+  
+  .pdu-button.monitored {
+    background-color: #5da88a;
+    color: white;
+  }
+  
+  .pdu-button.disabled {
+    background-color: transparent;
+    opacity: 0.4;
+    pointer-events: none;
+    border: 1px dashed var(--md-sys-color-outline);
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  /* Navigation Rail Toggle */
+  md-navigation-rail {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--md-sys-color-surface);
+    border-right: 1px solid var(--md-sys-color-outline);
+  }
+  
+  md-navigation-rail.hidden {
+    display: none;
+  }
+  
+  md-icon-button {
+    --md-icon-button-icon-color: var(--md-sys-color-on-primary);
+  }
+  
+  md-outlined-text-field {
+    width: 260px;
+  }
+  
+  .search-container {
+    margin-left: auto;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  header.app-header {
+    display: flex;
+    align-items: center;
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    height: 60px;
+    padding: 0 1rem;
+    gap: 1rem;
+    z-index: 99;
+  }
+  

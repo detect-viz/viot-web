@@ -1,0 +1,25 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 0 16px;
+  background-color: var(--md-sys-color-primary);
+  color: white;
+  gap: 16px;
+}
+
+.app-header md-icon-button {
+  color: white;
+}
+
+.app-header .title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  flex: 1;
+}
+
+.app-header .search-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

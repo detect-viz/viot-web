@@ -1,0 +1,26 @@
+.pdu-grid {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  gap: 8px;
+}
+.pdu-btn {
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.pdu-btn.unbound {
+  background-color: #eee;
+}
+.pdu-btn.bound {
+  background-color: #88e18e;
+}
+.pdu-btn.empty {
+  background-color: transparent;
+  border: 1px dashed #ccc;
+}
