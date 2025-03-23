@@ -1,0 +1,33 @@
+<!-- pdu-deploy.html -->
+<link rel="stylesheet" href="/css/style.css" />
+
+  <div class="main-layout">
+    <!-- 左側 -->
+    <div class="left-panel">
+      <!-- DC 選擇區塊（Segmented Button） -->
+      <div hx-get="/components/dc-selector/dc-selector.html" hx-trigger="load" hx-swap="innerHTML"></div>
+  
+      <!-- PDU 待綁定列表 -->
+      <div hx-get="/components/pdu-list/pdu-list.html" hx-trigger="load" hx-swap="innerHTML"></div>
+  
+      <!-- PDU 詳細資訊卡 -->
+      <div hx-get="/components/pdu-sidebar/pdu-sidebar.html" hx-trigger="load" hx-swap="innerHTML"></div>
+    </div>
+  
+    <!-- 右側 -->
+    <div class="right-panel">
+      <!-- Room Tabs -->
+      <div hx-get="/components/room-tabs/room-tabs.html" hx-trigger="load" hx-swap="innerHTML"></div>
+  
+      <!-- PDU Grid Layout -->
+      <div hx-get="/components/pdu-grid/pdu-grid.html" hx-trigger="load" hx-swap="innerHTML"></div>
+    </div>
+ 
+      <!-- 綁定 Dialog（覆蓋層） -->
+  <div hx-get="/components/pdu-dialog/pdu-dialog.html" hx-trigger="load" hx-swap="beforeend">
+  </div>
+  </div>
+
+  <script type="module" src="/js/app.js"></script>
+
+

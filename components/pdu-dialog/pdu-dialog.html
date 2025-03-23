@@ -1,0 +1,13 @@
+<!-- components/pdu-dialog/pdu-dialog.html -->
+<link rel="stylesheet" href="components/pdu-dialog/pdu-dialog.css">
+<script type="module" src="components/pdu-dialog/pdu-dialog.js"></script>
+<md-dialog id="bindDialog">
+  <div slot="headline">確認綁定</div>
+  <div slot="content">
+    是否綁定 IP <strong id="bindIp"></strong> 至 <strong id="bindRack"></strong>？
+  </div>
+  <div slot="actions">
+    <md-text-button dialog-action="cancel">取消</md-text-button>
+    <md-text-button dialog-action="confirm">綁定</md-text-button>
+  </div>
+</md-dialog>

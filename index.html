@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ViOT 控制台</title>
+
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+ <script type="importmap">
+   {
+     "imports": {
+       "@material/web/": "https://esm.run/@material/web/"
+     }
+   }
+ </script>
+ <script type="module">
+   import '@material/web/all.js';
+   import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+
+   document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+ </script>
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- 🔼 App Header + Navigation Rail -->
+  <header hx-get="/components/app-header/app-header.html" hx-trigger="load" hx-swap="innerHTML"></header>
+  <nav hx-get="/components/app-navigation-rail/app-navigation-rail.html" hx-trigger="load" hx-swap="innerHTML"></nav>
+  
+  <!-- 🔽 Main Layout (Sidebar + Content) -->
+  <main id="mainContent" hx-get="/pages/pdu-deploy.html" hx-trigger="load" hx-swap="innerHTML"></main>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
